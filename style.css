@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+}
+body{
+    background-color:  hsl(217, 54%, 11%); 
+    /* background-color: snow; */
+    display: flex;
+    
+    margin: auto auto;
+   
+}
+
+.dabba{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.image img{
+    width: 220px;
+    border-radius: 10px;
+    margin: 1vh 0 0vh 0 ;
+}
+
+
+/* .image img:hover{
+    opacity: 0.7;
+    
+}
+.image{
+    width: 220px;
+    margin: 0;
+    border-radius: 10px;
+    
+}
+.image:hover{
+    background: hsl(178, 100%, 50%);
+    z-index: 10;
+} */
+
+.container{
+    width: 250px;
+    height: 60vh;
+    /* border: 3px solid red; */
+    color:  hsl(215, 51%, 70%);
+    background-color: hsl(216, 50%, 16%);
+    display:grid ;
+    grid-template-columns: 15px 110px 110px 15px;
+    grid-template-rows: auto auto auto auto auto auto;
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+
+    border-radius: 10px;
+    box-shadow:
+     /* 0 0 50px black, */
+     0 0 30px black   ;
+}
+.image{
+    grid-column: 2/4;
+    grid-row: 1/2;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.image::before{
+    content: '';
+    
+   
+    position: absolute;
+    height: 220px;
+    width: 220px;
+    top: 0%;
+    margin-top: 1vh;
+    display: block;
+    background-color:  hsl(178, 100%, 50%,0.5);
+    background-image: url(/nft-preview-card-component-main/images/icon-view.svg);
+    background-repeat: no-repeat; 
+    background-position: center; 
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity ease-in 300ms;
+}
+.image:hover::before{
+    /* opacity: 0.5;  this will decrease the opacity of the eye svg as well so we arent using it */
+    opacity: 1;
+    background-color: hsla(178, 100%, 50%, 0.5);   /*this wont decrease the opacity of eye svg*/
+    cursor: pointer;
+}
+/* .view{
+    position: absolute;
+    display: flex;
+    width: 50px;
+
+}
+.image .view{
+    opacity: 0;
+}
+.image :hover{
+    opacity: 1;
+} */
+
+
+
+
+.name{
+    color: snow;
+    grid-column: 2/4;
+    grid-row: 2/3;
+    margin: 5px 0 ; 
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.name a{
+    text-decoration: none;
+    color: snow;
+
+}
+.name a:hover{
+    color:  hsl(178, 100%, 50%);
+}
+
+.summary{
+    grid-column: 2/4;
+    grid-row: 3/4;
+    /* margin: auto; */
+
+    font-size: 13.5px;
+    
+}
+.crypto-price{
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    grid-row: 4/5;
+    grid-column: 2/3;
+    color: hsl(178, 100%, 50%);
+    font-size: 15px;
+    font-weight: 400;
+
+
+}
+.time-left{
+    display: flex;
+    justify-content:end;
+    align-items: flex-start;
+    grid-row: 4/5;
+    grid-column: 3/4;
+
+    font-size: 15px;
+    font-weight: 200;
+    
+
+}
+
+.creator{
+    grid-row: 5/6;
+    grid-column: 2/4;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    margin-bottom: 0px;
+
+    font-size: 13px;
+
+    border-top: 1px solid  hsl(215, 32%, 27%);
+    
+}
+.creator-name{
+    grid-column: 2/4;
+    grid-row: 2/3;
+    margin: 0 0 0 15px; 
+}
+.creator-name a{
+    text-decoration: none;
+    color: white;
+}
+.creator-name a:hover{
+    color:  hsl(178, 100%, 50%);
+}
+
+.avatar{
+    
+    
+}
+.avatar img{
+    border: 1.5px solid white;
+    border-radius: 50%;
+    width: 2em;
+
+}
